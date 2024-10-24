@@ -11,6 +11,9 @@
     'three'
     'four'
     'five';
+    background-image: url(./P4JQ7V1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
    
 
 }
@@ -22,6 +25,7 @@
     border: solid 1px black;
     border-radius: .3rem;
     color: white;
+   
  
 }
 
