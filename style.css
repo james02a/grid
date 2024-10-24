@@ -1,0 +1,82 @@
+.grid-main{
+    display: grid;
+    gap: 1.5rem;
+    width: min(95%, 70rem);
+   /* grid-template-columns: repeat(4, 1fr); */
+    margin-inline: auto;
+    padding-block: 2rem;
+  grid-template-areas: 
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+   
+
+}
+.grid-col-span{
+    grid-column: span 2;
+}
+.grid-container{
+    padding: 2rem;
+    border: solid 1px black;
+    border-radius: .3rem;
+    color: white;
+ 
+}
+
+.grid-container:nth-child(1){
+    background-color: purple;
+    grid-area: one;
+}
+.grid-container:nth-child(2){
+    background-color: rgb(250, 159, 1);
+    grid-area: two;
+   
+}
+.grid-container:nth-child(3){
+    background-color: rgb(13, 56, 249);
+    grid-area: three;
+}
+.grid-container:nth-child(4){
+    background-color: rgb(15, 189, 56);
+    grid-area: four;
+   
+}
+.grid-container:last-child{
+    background-color: red;
+   /* grid-column-start: 4; it will start from the fourth colum
+  grid-row: 1/ 3; it will start from the first row to the last row*/
+  grid-area: five;
+}
+
+
+@media (min-width: 30rem) {
+
+    .grid-main{
+      
+        grid-template-areas:
+        'one one'
+        'two five'
+        'three five'
+        'four four';
+
+        
+
+    }
+    
+}
+
+@media (min-width: 50rem) {
+
+    .grid-main{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+        'one one two five'
+        'three four four five';
+
+    }
+    
+}
+
+
